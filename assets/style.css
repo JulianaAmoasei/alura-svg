@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: #FFEAD4;
+}
+
+.container {
+    width: 100vw;
+  }
+  
+#lettering {
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    fill: transparent;
+    width: 80%;
+    animation: preenchimento 0.5s ease forwards 2s;
+  }
+  
+  .container path {
+    stroke-width: 2px;
+    stroke: #be253f;
+    width: 100%;
+    height: 100%;
+    stroke-dashoffset: 6000;
+    stroke-dasharray: 6000;
+    animation: svg-animado 3s ease forwards 0.3s;
+  }
+  
+  #lettering {
+      position: absolute;
+  }
+
+  @keyframes svg-animado {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes preenchimento {
+    to {
+      fill: #be253f;
+    }
+  }
