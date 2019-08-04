@@ -92,7 +92,7 @@
 	}
 
 	#onda, #mar, #nuvens, #caiaques {
-		animation: teste 5s ease-in-out alternate 1;
+		animation: teste 2.5s ease-in-out alternate 1;
 	}
 
 	@keyframes teste {
