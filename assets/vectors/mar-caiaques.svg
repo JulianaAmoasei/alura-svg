@@ -97,7 +97,7 @@
 
 	@keyframes teste {
 		from {
-			transform: translate(0, -2000px);
+			transform: translate(0, -1800px);
 		}
 	}
 

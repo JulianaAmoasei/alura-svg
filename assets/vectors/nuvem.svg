@@ -1,0 +1,8 @@
+<svg id="nuvem" viewbox="0 0 800 600">
+    <g>
+        <circle cx="300" cy="300" r="20" stroke="rgb(216,250,253)" stroke-width="3" fill="rgb(216,250,253)" />
+        <circle cx="320" cy="320" r="30" stroke="rgb(216,250,253)" stroke-width="3" fill="rgb(216,250,253)" />
+        <circle cx="290" cy="320" r="25" stroke="rgb(216,250,253)" stroke-width="3" fill="rgb(216,250,253)" />
+        <circle cx="350" cy="315" r="25" stroke="rgb(216,250,253)" stroke-width="3" fill="rgb(216,250,253)" />
+    </g>
+</svg>
