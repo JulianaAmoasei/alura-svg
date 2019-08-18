@@ -1,12 +1,14 @@
 import { Marola } from './Marola.js';
+import { Cards } from './Cards.js';
+import { Figuras } from './Figuras.js';
 
 window.onload = () => {
-  const efeitoMarola = document.getElementById("feTurb");
   let marola = new Marola()
-  marola.marola(efeitoMarola)
+  marola.marola()
 
-  const cardEsq = document.querySelector(".card-esq")
-  const cardDir = document.querySelector(".card-dir")
+  let animaFiguras = new Figuras()
+  animaFiguras.figuras()
 
-  window.addEventListener('scroll', scrollCards)
+  let animaCards = new Cards()
+  document.addEventListener('scroll', animaCards.scrollCards)
 }

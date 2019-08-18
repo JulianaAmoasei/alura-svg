@@ -1,6 +1,11 @@
 class Marola {
-    marola(efeitoMarola){
-        TweenMax.to(efeitoMarola, 20, {
+
+    constructor (){
+        this.efeitoMarola = document.getElementById("feTurb")
+    }
+
+    marola(){
+        TweenMax.to(this.efeitoMarola, 20, {
             attr: {
                 baseFrequency: `${0.04} ${0.1}`
             },
@@ -10,4 +15,4 @@ class Marola {
     }
 }
 
-export {Marola}
+export { Marola }
