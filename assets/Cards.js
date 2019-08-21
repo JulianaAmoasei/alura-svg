@@ -4,6 +4,8 @@ class Cards {
     this.cardEsq = document.querySelector(".card-esq")
     this.cardDir = document.querySelector(".card-dir")
   }
+
+  
       
   scrollCards() {
       window.requestAnimationFrame(this.calculoScroll.bind(this));
@@ -16,11 +18,13 @@ class Cards {
   
   calculoScroll() {
     // this.featCards = document.getElementsByTagName("article")
-    let posicaoInicial = 70
+    console.log(innerWidth)
+    let posicaoInicialEsq = this.cardEsq.offsetLeft - 100
+    let posicaoInicialDir = this.cardDir.offsetLeft + 100
     let posicaoScrollAtual = window.scrollY;
 
-    Object.assign(this.cardEsq.style,{transform:`translate(${posicaoInicial * (posicaoScrollAtual / window.innerHeight)}%)`});    
-    Object.assign(this.cardDir.style,{transform:`translate(${-(posicaoInicial * (posicaoScrollAtual / window.innerHeight))}%)`});
+    Object.assign(this.cardEsq.style,{transform:`translate(${posicaoInicialEsq * (posicaoScrollAtual / window.innerHeight)}%)`});    
+    Object.assign(this.cardDir.style,{transform:`translate(${-(posicaoInicialDir * (posicaoScrollAtual / window.innerHeight))}%)`});
   }
     
 }
