@@ -43,7 +43,9 @@ body {
     border-radius: 10px;
     margin: 40px 20px;
   }
-
+  /* .card-esq{
+    position: -500px;
+  } */
   h1, h2 {
     font-family: 'Pacifico', cursive;
     color: #be253f;

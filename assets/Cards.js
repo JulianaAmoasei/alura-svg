@@ -17,16 +17,14 @@ class Cards {
   }
   
   calculoScroll() {
-    // this.featCards = document.getElementsByTagName("article")
-    console.log(innerWidth)
-    let posicaoInicialEsq = this.cardEsq.offsetLeft - 100
-    let posicaoInicialDir = this.cardDir.offsetLeft + 100
-    let posicaoScrollAtual = window.scrollY;
-
-    Object.assign(this.cardEsq.style,{transform:`translate(${posicaoInicialEsq * (posicaoScrollAtual / window.innerHeight)}%)`});    
-    Object.assign(this.cardDir.style,{transform:`translate(${-(posicaoInicialDir * (posicaoScrollAtual / window.innerHeight))}%)`});
-  }
-    
+    const pos = document.getElementsByClassName("section-dicas")[0].getBoundingClientRect()['y']
+    if (pos >= -30){
+      // Object.assign(this.cardEsq.style,{transform:`translate(${-(pos + 30)/6}%)`});    
+      // Object.assign(this.cardDir.style,{transform:`translate(${ (pos + 30)/6}%)`});
+      Object.assign(this.cardEsq.style,{transform:`rotateY(${-(pos + 30)/2}deg)`});    
+      Object.assign(this.cardDir.style,{transform:`rotateY(${ (pos + 30)/2}deg)`});
+    }  
+  }   
 }
 
 export { Cards }
