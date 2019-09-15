@@ -18,9 +18,13 @@ class Cards {
   
   calculoScroll() {
     const pos = document.getElementsByClassName("section-dicas")[0].getBoundingClientRect()['y']
+    console.log(pos)
     if (pos >= -30){
-      Object.assign(this.cardEsq.style,{transform:`translate(${-(pos + 30)/6}%)`});    
-      Object.assign(this.cardDir.style,{transform:`translate(${ (pos + 30)/6}%)`});
+      // Object.assign(this.cardEsq.style,{transform:`translate(${-(pos + 30)/6}%)`});    
+      // Object.assign(this.cardDir.style,{transform:`translate(${ (pos + 30)/6}%)`});
+      this.cardEsq.style.transform = `translate(${-(pos + 30)/6}%)`;
+      this.cardDir.style.transform = `translate(${(pos + 30)/6}%)`;
+
       // Object.assign(this.cardEsq.style,{transform:`rotateY(${-(pos + 30)/2}deg)`});    
       // Object.assign(this.cardDir.style,{transform:`rotateY(${ (pos + 30)/2}deg)`});
     }  
